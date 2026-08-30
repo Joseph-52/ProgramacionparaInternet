@@ -13,18 +13,13 @@
                 line-height: 1.5;
                 }
                 .item-con-imagen {
-                    display: flex;
-                    align-items: center;
-                    gap: 20px;
-                    justify-content: space-between;
-                }
-                .item-con-imagen img {
-                    max-width: 300px;
-                    border-radius: 8px;
+                    float: right;
+                    max-width: 320px;
+                    width: 100%;
                     height: auto;
-                    flex-shrink: 0;
-                }
-                
+                    margin: 0 0 15px 20px; /* Margen para que el texto no se le pegue encima */
+                    border-radius: 8px;
+                    }
                 body{
                     background-image: url('fondo2.jpg');
                     background-position: center;
@@ -40,8 +35,10 @@
     </head>
         <body>
 
-            <h1 style="text-align: center;">NO MAN'S SKY Y SU  SORPRENDENTE COMUNIDAD</h1style>
-                <h2> Introduccion:  </h2>
+            <h1 style="text-align: center;">NO MAN'S SKY Y SU  SORPRENDENTE COMUNIDAD </h1>
+                <h2> Introduccion:  <br>
+                    <a href="https://nomanssky.fandom.com/wiki/No_Man%27s_Sky_Wiki" target="_blank">VE A WIKI NO MAN'S SKY</a> 
+                </h2>
                 <p>No man's sky es un videojuego lanzado en agosto de 2016, disponible practicamente en todas las plataformas.
                     Es una experiencia de un solo jugador enfocada en la exploracion espacial, construccion de bases y de naves,
                     con un sin fin de mecanicas que no nos dara el tiempo de abarcar en esta pagina; SIn embargo, para mi una de las cosas mas interesantes no
@@ -54,36 +51,75 @@
                         Diez años y decenas de actualizaciones gratuitas después, no solo cumplieron lo que juraron, sino que superaron 
                         cualquier expectativa. Hoy, el caso de No Man's Sky no es solo un milagro de la industria, sino una de las pocas 
                             reconciliaciones genuinas entre una desarrolladora y su comunidad. </p>
-                <strong>LISTADO DE MOMENTOS DE LA COMUNIDAD:</strong>
+                <h4><strong>LISTADO DE MOMENTOS DE LA COMUNIDAD:</strong></h4>
                     <ol id="momentos-comunidad"> 
+                        <img src="AGRADECIMIENTO.jpg" alt="Anuncio de agradecimiento" class="item-con-imagen" />
                         <li>
-                            <div><strong>El proyecto Galactic Hub (2016):</strong> 
+                                <strong>El proyecto Galactic Hub (2016):</strong> 
                             los jugadores se coordinaron para viajar al mismo sector de la galaxia, mapear sistemas y crear la primera civilización comunitaria del juego.
-                        </div> </li>
-                        <li class ="item-con-imagen">
-                            <div>
+                         </li>
+                        <li>
                                 <strong>El Cartel publicitario de Agradecimiento(2019):</strong> 
-                                    La comunidad reunio fondos para pagar un cartel publicitario </div>
-                                <img src="AGRADECIMIENTO.jpg" alt="Anuncio de agradecimiento" height="200" width="350" />
+                                La comunidad reunio fondos para pagar un cartel publicitario 
                                 </li>
                          <li>
-                            <div>
                                 <strong>El culto y la fiebre de los emojis de Sean Murray:</strong> 
                                 Cada vez que el creador postea un solo emoji anunciando un nuevo parche, la comunidad colapsa 
                                 las redes analizando teorías, creando memes y compartiendo arte conceptual.
-                            </div>
                         </li> 
                         <li>
-                            <div>
                                 <strong>Expediciones:</strong> Eventos temporales donde miles de jugadores colaboran en rutas y metas globales.
-                            </div>
                         </li>
                     </ol> 
-                    
-                    
-
+                <h5>HUBS DE LA COMUNIDAD</h5>
+                <p>Los hubs son como "clanes" de la comunidad, se juntan para construir bases, explorar, etc.</p>
+                    <table class="tabla-hubs">
+                        <thead>
+                            <tr>
+                            <th>Civilización / Hub</th>
+                            <th>Galaxia principal</th>
+                            <th>Enfoque / Rol en la comunidad</th>
+                            <th>Integrantes estimados</th>
+                            <th>Bases y presencia registrada</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td><strong>Galactic Hub Project</strong></td>
+                            <td>Euclid</td>
+                            <td>Capital civilizada, colonización masiva, eventos y deportes (Exocraft racing).</td>
+                            <td>+15,000</td>
+                            <td>Cientos de bases activas concentradas en el sector de la capital (New Lennon / Drogradur).</td>
+                            </tr>
+                            <tr>
+                            <td><strong>Pirate Hub</strong></td>
+                            <td>Euclid</td>
+                            <td>Rol de piratería organizada, contratos de cazarrecompensas, combate PvP e intercambios sin reglas.</td>
+                            <td>~2,500 – 4,000</td>
+                            <td>Decenas de bases estilo fortaleza y estaciones clandestinas.</td>
+                            </tr>
+                            <tr>
+                            <td><strong>Alliance of Galactic Travellers (AGT)</strong></td>
+                            <td>Euclid</td>
+                            <td>Exploración científica, cartografía estelar y misiones de investigación diplomática.</td>
+                            <td>~1,500 – 3,000</td>
+                            <td>Amplia red de puestos de avanzada y bases de investigación distribuidas.</td>
+                            </tr>
+                            <tr>
+                            <td><strong>Amino Hub</strong></td>
+                            <td>Euclid</td>
+                            <td>Comunidad de constructores, diseño arquitectónico de bases y documentación multimedia.</td>
+                            <td>~1,000 – 2,000</td>
+                            <td>Decenas de bases emblemáticas enfocadas en estética y diseño complejo.</td>
+                            </tr>
+                            <tr>
+                            <td><strong>EisHub (Galactic Hub Eissentam)</strong></td>
+                            <td>Eissentam</td>
+                            <td>Extensión del Galactic Hub en la galaxia exuberante; colonización de mundos paradisíacos.</td>
+                            <td>~2,000 – 4,500</td>
+                            <td>Concentración masiva de asentamientos y bases en planetas con biomas de baja hostilidad.</td>
+                            </tr>
+                        </tbody>
+                        </table>
         </body>
-       
-
-    
 </html>
