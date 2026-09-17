@@ -6,15 +6,28 @@
     <title>RECIBIR-FORUMULARIO</title>
   </head>
   <body>
-    <?php if ($_SERVER["REQUEST_METHOD"] == "POST"){ $USER = $_POST['USER'];
-    $email = $_POST['email']; $Birthday = $_POST['Birthday']; //Imprimir los datos recibidos
+    <?php 
+    require('conexion.php');
+    
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){ 
+      $USER = $_POST['USER'] ?? '';
+    $email = $_POST['email'] ?? ''; 
+    $Birthday = $_POST['Birthday'] ?? ''; //Imprimir los datos recibidos
     echo"<h2>DATOS RECIBIDOS:</h2>";  
-    echo "
-    <ul>
-      "; echo "<l1>USER: " . $USER;"</l1>";
-      echo "<l1>E-MAIL: " . $email;"</l1>";
-      echo "<l1>DATE: " . $Birthday;"</l1>";
-    echo "</ul>";
-    }else{ echo "No fue peticion tipo POST, fue GET"; } ?>
+    $sql = "INSERT INTO personas (user, Birthday, email)
+      VALUES ('$USER', '$Birthday', '$email')";
+    $conn->exec($sql);
+    // Mostrar información de tabla personas 
+
+    $stmt = $conn->query("SELECT * FROM personas");
+    $personas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($personas as $persona) {
+                echo "<p>Nombre: " . $persona['user'] . ", Correo: " . $persona['email'] . ", Fecha de nacimiento: " . $persona['Birthday'] . "</p>";
+            }
+        } else {
+            echo "<p>No es una petición tipo POST.</p>";
+        }
+    ?>
   </body>
 </html>
